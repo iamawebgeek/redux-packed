@@ -1,0 +1,15 @@
+{
+  "include": ["./src"],
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "declaration": true,
+    "lib": ["dom", "esnext"],
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
