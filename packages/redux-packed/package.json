@@ -1,0 +1,43 @@
+{
+  "name": "redux-packed",
+  "version": "0.0.1",
+  "description": "Modularize your redux code into small packs",
+  "repository": "iamawebgeek/redux-packed",
+  "license": "Apache 2.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "prettier": "prettier --write src/** src/**/*",
+    "prepublish": "yarn build"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "lodash.pick": "^4.4.0",
+    "lodash.snakecase": "^4.1.1",
+    "redux-actions": "^2.6.5"
+  },
+  "peerDependencies": {
+    "immer": "*",
+    "redux": "*"
+  },
+  "devDependencies": {
+    "@types/lodash.pick": "^4.4.6",
+    "@types/lodash.snakecase": "^4.1.6",
+    "@types/redux": "^3.6.0",
+    "@types/redux-actions": "^2.6.1",
+    "husky": "^2.3.0",
+    "immer": "^3.1.2",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.11.0",
+    "redux": "^4.0.1",
+    "rollup": "^1.12.4",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "rollup-plugin-uglify": "^6.0.2",
+    "typescript": "^3.4.5"
+  }
+}
