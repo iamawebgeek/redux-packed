@@ -1,6 +1,6 @@
 {
   "name": "redux-packed",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Modularize your redux code into small packs",
   "repository": "iamawebgeek/redux-packed",
   "license": "Apache 2.0",
