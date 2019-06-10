@@ -9,7 +9,7 @@ type Merge<T extends Record<string, FlatPack>, G extends Generics> = Flatten<
   { [K in keyof T]: FPG<T[K]>[G] }
 >
 
-export function combinePacks<F>(middlewares: Middleware[]) {
+export default function combinePacks<F>(middlewares: Middleware[]) {
   return function<T extends Record<string, FlatPack<any, any, any, F>>>(
     packMap: T,
   ): FlatPack<Merge<T, 0>, Merge<T, 1>, Merge<T, 2>, F> {

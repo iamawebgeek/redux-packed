@@ -2,7 +2,7 @@ import { createActions } from 'redux-actions'
 import { ExtractedPack, FlatPack, Middleware } from './types'
 import { actionExtractor } from './symbols'
 
-export function extractPack<E>(middlewares: Middleware[]) {
+export default function extractPack<E>(middlewares: Middleware[]) {
   return function<T extends FlatPack>(pack: T): ExtractedPack<T, E> {
     const { actions, selectors, reducerCreator } = pack
     const allActions = createActions(actions)

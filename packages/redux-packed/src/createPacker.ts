@@ -1,8 +1,8 @@
 import { PackMiddleware } from './types'
-import { createPack } from './createPack'
-import { combinePacks } from './combinePacks'
-import { extractPack } from './extractPack'
-import { mergeExtractedPacks } from './mergeExtractedPacks'
+import createPack from './createPack'
+import combinePacks from './combinePacks'
+import extractPack from './extractPack'
+import mergeExtractedPacks from './mergeExtractedPacks'
 
 export const createPacker = <F, E>(middlewares?: PackMiddleware<F, E>[] = []) => {
   return {

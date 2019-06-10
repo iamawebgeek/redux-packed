@@ -16,7 +16,7 @@ type CastedToObject<T extends PackData[], G extends Generics> = {
 }
 type Merge<T extends PackData[], G extends Generics> = Flatten<CastedToObject<T, G>>
 
-export function createPack<F>(middlewares: Middleware[]) {
+export default function createPack<F>(middlewares: Middleware[]) {
   return function<T extends PackData<any, any, any>[]>(
     allParts: T,
   ): FlatPack<Merge<T, 0>, Merge<T, 1> & Selectors<Merge<T, 0>>, Merge<T, 2>, F> {

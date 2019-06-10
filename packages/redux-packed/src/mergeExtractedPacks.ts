@@ -14,7 +14,7 @@ type Merge<T extends ExtractedPack<FlatPack>[]> = FlatPack<
   object
 >
 
-export function mergeExtractedPacks<E>(middlewares: Middleware[]) {
+export default function mergeExtractedPacks<E>(middlewares: Middleware[]) {
   return function<T extends ExtractedPack<any>[]>(
     ...extractedPacks: T
   ): ExtractedPack<Merge<T>, E> {
